@@ -7,7 +7,7 @@ export class App extends Component {
     super();
 
     this.state = {
-      showNumber: "0",
+      showNumber: 0,
       numberA: 0,
       numberB: 0,
       result: 0
@@ -15,7 +15,7 @@ export class App extends Component {
   }
 
   receiveNumber = e => {
-    if (this.state.showNumber === "0") {
+    if (this.state.showNumber === 0) {
       this.setState({ showNumber: e });
     } else {
       this.setState({ showNumber: this.state.showNumber + e });
@@ -23,15 +23,22 @@ export class App extends Component {
   };
 
   clearScreen = () => {
-    this.setState({ showNumber: '0' });
+    this.setState({ showNumber: 0 });
   };
 
-  operate = (e) => {
-    if(e === '+') {
-      this.setState({ numberA: Number(this.state.showNumber) });
-      console.log(typeof this.state.numberA, this.state.numberA)
+  operate = e => {
+    if (e === "+") {
+      this.setState({ numberA: this.state.showNumber, showNumber: 0 });
+    } else if (e === "-") {
+      this.setState({ numberA: this.state.showNumber, showNumber: 0 });
+    } else if (e === "*") {
+      this.setState({ numberA: this.state.showNumber, showNumber: 0 });
+    } else if (e === "/") {
+      this.setState({ numberA: this.state.showNumber, showNumber: 0 });
     }
-  }
+  };
+
+  calculate = e => {};
 
   render() {
     return (
@@ -46,7 +53,6 @@ export class App extends Component {
               <CalBtn touchThis={this.receiveNumber} number="8" />
               <CalBtn touchThis={this.receiveNumber} number="9" />
               <CalBtn touchThis={this.operate} number="+" />
-
             </div>
             <div>
               <CalBtn touchThis={this.receiveNumber} number="4" />
@@ -64,7 +70,7 @@ export class App extends Component {
               <CalBtn touchThis={this.receiveNumber} number="AC" />
             </div>
             <div>
-            <CalBtn touchThis={this.receiveNumber} number="Calculate" />
+              <CalBtn touchThis={this.operate} number="Calculate" />
             </div>
           </div>
         </div>
