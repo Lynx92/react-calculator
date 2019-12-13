@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide&display=swap");
+
+button {
+    
+  font-family: "Audiowide", cursive;
+  font-size: x-large;
+  font-weight: bold;
+  padding: 3% 5%;
+  color: white;
+  background-color: blue;
+  margin: 2%;
+  border-radius: 15%;
+}
