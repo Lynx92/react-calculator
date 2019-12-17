@@ -1,13 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide&display=swap");
 
-button {
-    
+button.calc-button {
   font-family: "Audiowide", cursive;
   font-size: x-large;
   font-weight: bold;
-  padding: 3% 5%;
   color: white;
   background-color: blue;
   margin: 2%;
   border-radius: 15%;
+  min-height: 50%;
+}
+
+button.calc-button.size-1 {
+  min-width: 15%;
+}
+
+button.calc-button.size-2 {
+  min-width: 35%;
+}
+
+button.calc-button.size-3 {
+  min-width: 53%;
 }

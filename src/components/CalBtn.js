@@ -1,9 +1,16 @@
 import React, { Component } from "react";
-import '../styles/cal-btn.css'
+import "../styles/cal-btn.css";
 
-export class CalBtn extends Component {
+class CalBtn extends Component {
   render() {
-  return <button onClick={() => this.props.touchThis(this.props.number)}>{this.props.number}</button>;
+    return (
+      <button
+        className={`calc-button ${this.props.size}`}
+        onClick={() => this.props.touchThis(this.props.number)}
+      >
+        {this.props.number}
+      </button>
+    );
   }
 }
 
